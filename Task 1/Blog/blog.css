@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: rgb(4, 7, 30);
+  color: white;
+  padding: 15px;
+}
+
+nav img {
+  height: 130px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: small;
+}
+
+.nav-links li a:hover {
+  color: #00bfff;
+}
+
+.nav-links li a.active {
+  color: #00bfff;
+  border-bottom: 2px solid #00bfff;
+  padding-bottom: 5px;
+}
+
+nav button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background-color: rgba(39, 39, 252, 0.907);
+  color: white;
+  cursor: pointer;
+}
+
+.blogs {
+  color: white;
+  text-align: center;
+  height: 200px;
+  padding: 40px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 10, 35, 0.95) 0%,
+      rgba(5, 30, 80, 0.8) 45%,
+      rgba(5, 30, 80, 0.45) 100%
+    ),
+    url("../About/images/about1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blogs .headp {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.blogs h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.blogs p {
+  margin-bottom: 20px;
+}
+
+.blogs span {
+  display: block;
+  font-size: 12px;
+}
+
+.blogcards {
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 1px 1px 4px gray;
+  margin-left: 30px;
+}
+
+.card-container {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.cards {
+  display: flex;
+  gap: 50px;
+  margin: 15px 15px;
+  width: 900px;
+  height: 110px;
+}
+
+.cardimg img {
+  height: 110px;
+  border-radius: 5px;
+}
+
+.blogcards {
+  padding: 20px 20px;
+}
+
+.coll {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+.cardtext h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.cardtext span {
+  display: block;
+  font-size: 13px;
+  margin-left: 10px;
+  font-weight: 100;
+}
+
+.coll p {
+  font-size: 12px;
+}
+
+.coll a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #00bfff;
+}
+
+.search {
+  width: 25%;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 1px 1px 4px gray;
+  padding: 20px;
+  margin-right: 30px;
+}
+
+.search h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.categories h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.categories ul li {
+  list-style: none;
+  font-size: 15px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.recent h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.recent p {
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: rgb(4, 7, 30);
+  color: white;
+  height: 260px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+footer img {
+  height: 110px;
+}
+
+.fcombined {
+  margin-left: 100px;
+}
+
+.fcombined p {
+  width: 40%;
+  text-align: start;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.fquicklinks {
+  margin: 10px;
+}
+
+.fquicklinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.fquicklinks ul li {
+  list-style: none;
+  margin: 15px 0px;
+}
+
+.fservices {
+  margin: 10px;
+}
+
+.fservices ul li {
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.fcontact {
+  margin: 10px;
+}
+
+.fcontact ul li {
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+
+
+@media (max-width: 1200px) {
+  .cards {
+    width: 100%;
+    gap: 25px;
+  }
+
+  .search {
+    width: 30%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav img {
+    height: 110px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  nav button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .blogcards {
+    margin: 0;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+    margin: 0;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  footer {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .fcombined {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .fcombined p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  nav button {
+    width: fit-content;
+  }
+
+  .blogs {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .blogs h2 {
+    font-size: 28px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cardimg img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .coll {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fcombined {
+    text-align: center;
+  }
+
+  .fcombined p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+    height: 90px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav button {
+    width: 100%;
+  }
+
+  .blogs {
+    padding: 40px 15px;
+  }
+
+  .blogs h2 {
+    font-size: 24px;
+  }
+
+  .blogs span {
+    font-size: 14px;
+  }
+
+  .cardtext h3 {
+    font-size: 18px;
+  }
+
+  .cardtext span {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .coll p,
+  .coll a {
+    font-size: 14px;
+  }
+
+  .search h3,
+  .categories h3,
+  .recent h3 {
+    font-size: 18px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  footer img {
+    height: 90px;
+  }
+}

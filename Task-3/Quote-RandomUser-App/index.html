@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quote Generator & Random User</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>
+
+<i class="fa-solid fa-quote-left"></i>
+
+Quote Generator & Random User
+
+</h1>
+
+<button id="themeBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</header>
+
+<!-- ========================= -->
+<!-- Quote Section -->
+<!-- ========================= -->
+
+<section class="quote-section">
+
+<h2>
+
+<i class="fa-solid fa-comment-dots"></i>
+
+Daily Quotes
+
+</h2>
+
+<div class="quote-card">
+
+<p id="quote">
+
+Click the button to generate a quote.
+
+</p>
+
+<h3 id="author">
+
+— Unknown
+
+</h3>
+
+<div class="quote-buttons">
+
+<button id="newQuoteBtn">
+
+<i class="fa-solid fa-rotate"></i>
+
+New Quote
+
+</button>
+
+<button id="copyBtn">
+
+<i class="fa-solid fa-copy"></i>
+
+Copy
+
+</button>
+
+<button id="tweetBtn">
+
+<i class="fa-brands fa-x-twitter"></i>
+
+Tweet
+
+</button>
+
+<button id="favoriteQuoteBtn">
+
+<i class="fa-solid fa-heart"></i>
+
+Favorite
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Random User Section -->
+<!-- ========================= -->
+
+<section class="user-section">
+
+<h2>
+
+<i class="fa-solid fa-user"></i>
+
+Random User
+
+</h2>
+
+<div class="user-card">
+
+<img
+id="profileImage"
+src="https://via.placeholder.com/200"
+alt="Profile">
+
+<h2 id="userName">
+
+Loading...
+
+</h2>
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+<span id="email"></span>
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-phone"></i>
+
+<span id="phone"></span>
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-venus-mars"></i>
+
+<span id="gender"></span>
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-cake-candles"></i>
+
+Age :
+
+<span id="age"></span>
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span id="address"></span>
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-earth-americas"></i>
+
+<span id="country"></span>
+
+</p>
+
+<div class="user-buttons">
+
+<button id="newUserBtn">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Generate User
+
+</button>
+
+<button id="saveBtn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Contact
+
+</button>
+
+<button id="downloadBtn">
+
+<i class="fa-solid fa-download"></i>
+
+Download vCard
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Saved Quotes -->
+<!-- ========================= -->
+
+<section>
+
+<h2>
+
+❤️ Favorite Quotes
+
+</h2>
+
+<div id="favoriteQuotes" class="favorite-container">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Saved Contacts -->
+<!-- ========================= -->
+
+<section>
+
+<h2>
+
+👥 Saved Contacts
+
+</h2>
+
+<div id="savedContacts" class="favorite-container">
+
+</div>
+
+</section>
+
+<div id="loader" class="loader hidden">
+
+Loading...
+
+</div>
+
+<div id="errorMessage" class="error hidden">
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

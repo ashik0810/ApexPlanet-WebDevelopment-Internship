@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Expense | Smart Expense Tracker</title>
+
+    <link rel="shortcut icon" href="assets/icons/favicon.webp" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-wallet"></i>
+          <div class="header-title">
+            <h2>Smart Expense</h2>
+            <span>Tracker</span>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-solid fa-house"></i> Dashboard</a
+              >
+            </li>
+            <li class="active">
+              <a href="add-expense.html"
+                ><i class="fa-solid fa-plus"></i> Add Expense</a
+              >
+            </li>
+            <li>
+              <a href="expenses.html"
+                ><i class="fa-solid fa-list"></i> Expenses</a
+              >
+            </li>
+            <li>
+              <a href="analytics.html"
+                ><i class="fa-solid fa-chart-pie"></i> Analytics</a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="upgrade-card" >
+          <img
+            class="lazy"
+            src=""
+            data-src="assets/images/upgrade-img.png"
+            alt="Upgrade"
+          />
+          <h3>Upgrade to Pro</h3>
+          <p>Unlock premium features and analytics.</p>
+          <button>Upgrade Now</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <div class="left-header">
+            <i class="fa-solid fa-bars" id="menuBtn"></i>
+            <h1>Expense Adder</h1>
+          </div>
+
+          <div class="right-header">
+            <div class="notification">
+              <i class="fa-regular fa-bell"></i>
+              <span>3</span>
+            </div>
+
+            <button id="themeBtn">
+              <i class="fa-regular fa-moon"></i>
+            </button>
+
+            <div class="profile">
+              <img
+                class="lazy"
+                src=""
+                data-src="assets/icons/profile-icon.webp"
+                alt="Profile"
+              />
+              <div class="profile-info">
+                <p id="profileName">John Doe</p>
+                <span>Premium</span>
+              </div>
+
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </header>
+
+        <section class="page-title">
+          <h1>Add Expense</h1>
+
+          <p>Create a new expense entry.</p>
+        </section>
+
+        <section class="expense-form-card">
+          <form id="expenseForm">
+            <div class="form-group">
+              <label>Expense Name</label>
+
+              <input id="expenseName" type="text" placeholder="Expense Name" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Amount</label>
+
+                <input id="amount" type="number" placeholder="₹0.00" />
+              </div>
+
+              <div class="form-group">
+                <label>Date</label>
+
+                <input id="expenseDate" type="date" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Category</label>
+
+                <select id="category">
+                  <option>Food</option>
+
+                  <option>Transport</option>
+
+                  <option>Shopping</option>
+
+                  <option>Bills</option>
+
+                  <option>Entertainment</option>
+
+                  <option>Health</option>
+
+                  <option>Travel</option>
+
+                  <option>Education</option>
+
+                  <option>Others</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Payment Method</label>
+
+                <select id="payment">
+                  <option>UPI</option>
+
+                  <option>Cash</option>
+
+                  <option>Credit Card</option>
+
+                  <option>Debit Card</option>
+
+                  <option>Net Banking</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Notes</label>
+
+              <textarea
+                id="notes"
+                rows="5"
+                placeholder="Additional Notes"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Upload Receipt</label>
+
+              <input id="receipt" type="file" />
+            </div>
+
+            <div class="form-row">
+              <button type="reset" class="cancel-btn">Cancel</button>
+
+              <button type="submit" class="save-btn">Save Expense</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/addExpense.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <script src="utils/throttle.js"></script>
+    <script src="utils/lazyload.js"></script>
+  </body>
+</html>

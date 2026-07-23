@@ -1,0 +1,257 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:#fff;
+    min-height:100vh;
+    transition:.3s;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:30px 0;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    font-size:2.2rem;
+    color:#fff;
+}
+
+header button{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#ffffff30;
+    color:white;
+    cursor:pointer;
+    font-size:20px;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+}
+
+header button:hover{
+    transform:rotate(25deg) scale(1.05);
+}
+
+section{
+    margin-bottom:40px;
+}
+
+section h2{
+    margin-bottom:20px;
+    color:#ffd166;
+}
+
+.quote-card,
+.user-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.quote-card{
+    text-align:center;
+}
+
+.quote-card p{
+    font-size:24px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.quote-card h3{
+    color:#ffd166;
+    margin-bottom:20px;
+}
+
+.quote-buttons,
+.user-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.quote-buttons button,
+.user-buttons button{
+    padding:12px 22px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#newQuoteBtn{
+    background:#2563eb;
+    color:white;
+}
+
+#copyBtn{
+    background:#16a34a;
+    color:white;
+}
+
+#tweetBtn{
+    background:#111827;
+    color:white;
+}
+
+#favoriteQuoteBtn{
+    background:#dc2626;
+    color:white;
+}
+
+#newUserBtn{
+    background:#2563eb;
+    color:white;
+}
+
+#saveBtn{
+    background:#16a34a;
+    color:white;
+}
+
+#downloadBtn{
+    background:#ea580c;
+    color:white;
+}
+
+.quote-buttons button:hover,
+.user-buttons button:hover{
+    transform:translateY(-4px);
+}
+
+.user-card{
+    text-align:center;
+}
+
+.user-card img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:20px;
+}
+
+.user-card h2{
+    margin-bottom:15px;
+}
+
+.user-card p{
+    margin:12px 0;
+    font-size:17px;
+}
+
+.favorite-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:20px;
+}
+
+.favorite-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.favorite-card h3{
+    margin-bottom:10px;
+}
+
+.favorite-card p{
+    margin:8px 0;
+}
+
+.loader{
+    text-align:center;
+    font-size:22px;
+    margin:25px;
+}
+
+.hidden{
+    display:none;
+}
+
+.error{
+    background:#dc2626;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.dark{
+    background:#f1f5f9;
+    color:#111827;
+}
+
+.dark .quote-card,
+.dark .user-card,
+.dark .favorite-card{
+    background:white;
+    color:#111827;
+}
+
+.dark header button{
+    background:#111827;
+    color:white;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+header h1{
+    font-size:1.8rem;
+    text-align:center;
+}
+
+.quote-card p{
+    font-size:20px;
+}
+
+.quote-buttons,
+.user-buttons{
+    flex-direction:column;
+}
+
+.quote-buttons button,
+.user-buttons button{
+    width:100%;
+}
+
+.user-card img{
+    width:140px;
+    height:140px;
+}
+
+.favorite-container{
+    grid-template-columns:1fr;
+}
+
+}

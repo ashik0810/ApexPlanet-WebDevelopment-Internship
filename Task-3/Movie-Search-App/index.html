@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/movie-hub-logo.webp"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Movie Search Hub</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <i class="fa-solid fa-film"></i>
+          Movie Search Hub
+        </h1>
+
+        <div class="theme">
+          <button id="themeBtn">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="search-area">
+        <input type="text" id="movieInput" placeholder="Search Movie..." />
+        <button id="searchBtn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          Search
+        </button>
+      </div>
+
+      <div class="filters">
+        <select id="yearFilter">
+          <option value="">All Years</option>
+        </select>
+
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="">Movies</option>
+          <option value="">Series</option>
+          <option value="">Episodes</option>
+        </select>
+      </div>
+
+      <div id="loader" class="loader hidden">Loading...</div>
+
+      <div id="errorMessage" class="error hidden"></div>
+
+      <section>
+        <h2>Search results</h2>
+        <div id="movieContainer" class="movie-container"></div>
+      </section>
+
+      <section>
+        <h2>Favorite Movies</h2>
+        <div id="favoriteContainer" class="movie-container"></div>
+      </section>
+
+      <div id="movieModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="config.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

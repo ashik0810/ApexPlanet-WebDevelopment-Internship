@@ -1,0 +1,150 @@
+.analytics-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.analytics-card{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.analytics-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.analytics-card h3{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    font-weight:600;
+    color:var(--text);
+    margin-bottom:18px;
+}
+
+.analytics-card h3 i{
+    color:var(--primary);
+    font-size:20px;
+}
+
+.analytics-card p{
+    font-size:15px;
+    color:var(--light);
+    margin-bottom:10px;
+}
+
+.analytics-card h2{
+    font-size:32px;
+    font-weight:700;
+    color:var(--text);
+}
+
+.chart-box{
+    transition:.3s;
+}
+
+.chart-box:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.chart-header select{
+    cursor:pointer;
+}
+
+#lineChart{
+    width:100% !important;
+    height:350px !important;
+}
+
+.analytics-card:nth-child(1) h3 i{
+    color:#19C463;
+}
+
+.analytics-card:nth-child(2) h3 i{
+    color:#3B82F6;
+}
+
+.analytics-card:nth-child(3) h3 i{
+    color:#F59E0B;
+}
+
+.analytics-card:nth-child(4) h3 i{
+    color:#8B5CF6;
+}
+
+.analytics-card:nth-child(1) h2{
+    color:#19C463;
+}
+
+.analytics-card:nth-child(2) h2{
+    color:#3B82F6;
+}
+
+.analytics-card:nth-child(3) h2{
+    color:#F59E0B;
+}
+
+.analytics-card:nth-child(4) h2{
+    color:#8B5CF6;
+}
+
+@media(max-width:992px){
+
+    .analytics-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .analytics-card{
+        padding:20px;
+    }
+
+    .analytics-card h2{
+        font-size:26px;
+    }
+
+    .analytics-card h3{
+        font-size:17px;
+    }
+
+    #lineChart{
+        height:300px !important;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .analytics-card{
+        padding:18px;
+    }
+
+    .analytics-card h2{
+        font-size:22px;
+    }
+
+    .analytics-card h3{
+        font-size:16px;
+    }
+
+    .analytics-card p{
+        font-size:14px;
+    }
+
+    #lineChart{
+        height:260px !important;
+    }
+
+}
+

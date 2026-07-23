@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | Smart Expense Tracker</title>
+
+    <link rel="shortcut icon" href="assets/icons/favicon.webp" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/settings.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-wallet"></i>
+
+          <div class="header-title">
+            <h2>Smart Expense</h2>
+            <span>Tracker</span>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="add-expense.html">
+                <i class="fa-solid fa-plus"></i>
+                Add Expense
+              </a>
+            </li>
+
+            <li>
+              <a href="expenses.html">
+                <i class="fa-solid fa-list"></i>
+                Expenses
+              </a>
+            </li>
+
+            <li>
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Analytics
+              </a>
+            </li>
+
+            <li class="active">
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="upgrade-card">
+          <img
+            class="lazy"
+            src=""
+            data-src="assets/images/upgrade-img.png"
+            alt="Upgrade"
+          />
+
+          <h3>Upgrade to Pro</h3>
+
+          <p>Unlock premium features and analytics.</p>
+
+          <button>Upgrade Now</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <div class="left-header">
+            <i class="fa-solid fa-bars" id="menuBtn"></i>
+
+            <h1>Settings</h1>
+          </div>
+
+          <div class="right-header">
+            <div class="search-box">
+              <i class="fa-solid fa-bars menu-icon"></i>
+
+              <input type="search" placeholder="Search settings..." />
+
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+            <div class="notification">
+              <i class="fa-regular fa-bell"></i>
+
+              <span>3</span>
+            </div>
+
+            <button id="themeBtn">
+              <i class="fa-regular fa-moon"></i>
+            </button>
+
+            <div class="profile">
+              <img
+                class="lazy"
+                src=""
+                data-src="assets/icons/profile-icon.webp"
+                alt="Profile"
+              />
+
+              <div class="profile-info">
+                <p id="profileName">John Doe</p>
+
+                <span>Premium</span>
+              </div>
+
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </header>
+
+        <section class="page-title">
+          <h1>Application Settings</h1>
+          <p>Manage your preferences and personalize your expense tracker.</p>
+        </section>
+
+        <form id="settingsForm">
+          <section class="settings-grid">
+            <div class="settings-card">
+              <h2>
+                <i class="fa-solid fa-user"></i>
+                Profile
+              </h2>
+
+              <div class="form-group">
+                <label for="username">Full Name</label>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" />
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <h2>
+                <i class="fa-solid fa-wallet"></i>
+                Monthly Budget
+              </h2>
+
+              <div class="form-group">
+                <label for="budget">Budget</label>
+                <input type="number" id="budget" placeholder="20000" />
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <h2>
+                <i class="fa-solid fa-money-bill"></i>
+                Currency
+              </h2>
+
+              <div class="form-group">
+                <label for="currency">Currency</label>
+
+                <select id="currency">
+                  <option value="₹">Indian Rupee (₹)</option>
+                  <option value="$">US Dollar ($)</option>
+                  <option value="€">Euro (€)</option>
+                  <option value="£">Pound (£)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <h2>
+                <i class="fa-solid fa-bell"></i>
+                Notifications
+              </h2>
+
+              <div class="setting-switch">
+                <span>Enable Notifications</span>
+
+                <input type="checkbox" id="notifications" />
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <h2>
+                <i class="fa-solid fa-database"></i>
+                Data Management
+              </h2>
+
+              <button type="button" id="exportBtn" class="view-btn">
+                Export Data
+              </button>
+
+              <input type="file" id="importFile" hidden accept=".json" />
+
+              <button type="button" id="importBtn" class="filter-btn">
+                Import Backup
+              </button>
+
+              <button type="button" id="resetBtn" class="delete-account">
+                Reset All Data
+              </button>
+            </div>
+          </section>
+
+          <section class="save-settings">
+            <button type="submit" class="save-btn">Save Changes</button>
+          </section>
+        </form>
+      </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <script src="utils/debounce.js"></script>
+    <script src="utils/throttle.js"></script>
+    <script src="utils/lazyload.js"></script>
+  </body>
+</html>

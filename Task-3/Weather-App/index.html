@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1><i class="fa-solid fa-cloud-sun"></i> Weather Dashboard</h1>
+
+        <div class="top-buttons">
+            <button id="locationBtn">
+                <i class="fa-solid fa-location-dot"></i>
+                Current Location
+            </button>
+
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city name">
+
+        <button id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search
+        </button>
+
+    </section>
+
+    <div id="loader" class="loader hidden">
+        Loading...
+    </div>
+
+    <div id="errorMessage" class="error hidden"></div>
+
+    <section class="weather-card">
+
+        <div class="weather-top">
+
+            <div class="icon">
+                <img id="weatherIcon" src="" alt="">
+            </div>
+
+            <div class="temperature">
+
+                <h2 id="temp">--°C</h2>
+
+                <button id="unitToggle">
+                    °C / °F
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="weather-info">
+
+            <h3 id="cityName">
+                City
+            </h3>
+
+            <p id="description">
+                Weather Description
+            </p>
+
+            <p id="dateTime">
+                Date & Time
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="details">
+
+        <div class="card">
+            <i class="fa-solid fa-temperature-half"></i>
+            <h4>Feels Like</h4>
+            <p id="feelsLike">--</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-droplet"></i>
+            <h4>Humidity</h4>
+            <p id="humidity">--</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-wind"></i>
+            <h4>Wind Speed</h4>
+            <p id="wind">--</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-gauge-high"></i>
+            <h4>Pressure</h4>
+            <p id="pressure">--</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-eye"></i>
+            <h4>Visibility</h4>
+            <p id="visibility">--</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-sun"></i>
+            <h4>Sunrise</h4>
+            <p id="sunrise">--</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-moon"></i>
+            <h4>Sunset</h4>
+            <p id="sunset">--</p>
+        </div>
+
+    </section>
+
+    <section class="forecast">
+
+        <h2>5-Day Forecast</h2>
+
+        <div id="forecastCards" class="forecast-container">
+
+        </div>
+
+    </section>
+
+    <section class="recent">
+
+        <h2>Recent Searches</h2>
+
+        <ul id="recentList">
+
+        </ul>
+
+    </section>
+
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

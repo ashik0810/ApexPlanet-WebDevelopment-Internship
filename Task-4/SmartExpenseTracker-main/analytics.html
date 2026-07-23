@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Analytics | Smart Expense Tracker</title>
+
+    <link rel="shortcut icon" href="assets/icons/favicon.webp" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/analytics.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-wallet"></i>
+
+          <div class="header-title">
+            <h2>Smart Expense</h2>
+
+            <span>Tracker</span>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="add-expense.html">
+                <i class="fa-solid fa-plus"></i>
+
+                Add Expense
+              </a>
+            </li>
+
+            <li>
+              <a href="expenses.html">
+                <i class="fa-solid fa-list"></i>
+
+                Expenses
+              </a>
+            </li>
+
+            <li class="active">
+              <a href="analytics.html">
+                <i class="fa-solid fa-chart-pie"></i>
+
+                Analytics
+              </a>
+            </li>
+
+            <li>
+              <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="upgrade-card">
+          <img
+            class="lazy"
+            src=""
+            data-src="assets/images/upgrade-img.png"
+            alt="Upgrade"
+          />
+
+          <h3>Upgrade to Pro</h3>
+
+          <p>Unlock premium features and analytics.</p>
+
+          <button>Upgrade Now</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <div class="left-header">
+            <i class="fa-solid fa-bars" id="menuBtn"></i>
+
+            <h1>Analytics</h1>
+          </div>
+
+          <div class="right-header">
+            <div class="search-box">
+              <i class="fa-solid fa-bars menu-icon"></i>
+
+              <input type="search" placeholder="Search analytics..." />
+
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+            <div class="notification">
+              <i class="fa-regular fa-bell"></i>
+
+              <span>3</span>
+            </div>
+
+            <button id="themeBtn">
+              <i class="fa-regular fa-moon"></i>
+            </button>
+
+            <div class="profile">
+              <img
+                class="lazy"
+                src=""
+                data-src="assets/icons/profile-icon.webp"
+                alt="Profile"
+              />
+
+              <div class="profile-info">
+                <p id="profileName">John Doe</p>
+
+                <span>Premium</span>
+              </div>
+
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </header>
+
+        <section class="page-title">
+          <h1>Expense Analytics</h1>
+
+          <p>Visualize your spending habits and financial insights.</p>
+        </section>
+
+        <section class="cards">
+          <div class="card">
+            <div class="icon green">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <div>
+              <h3>Total Expenses</h3>
+
+              <h2 id="analyticsTotal">₹0</h2>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="icon blue">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+
+            <div>
+              <h3>Highest Expense</h3>
+
+              <h2 id="highestExpense">₹0</h2>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="icon orange">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+
+            <div>
+              <h3>Average</h3>
+
+              <h2 id="averageExpense">₹0</h2>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="icon purple">
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+
+            <div>
+              <h3>Transactions</h3>
+
+              <h2 id="analyticsTransactions">0</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="charts">
+          <div class="chart-box">
+            <div class="chart-header">
+              <h2>Category Distribution</h2>
+
+              <select id="pieFilter">
+                <option>This Month</option>
+
+                <option>This Year</option>
+              </select>
+            </div>
+
+            <canvas id="categoryChart"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <div class="chart-header">
+              <h2>Monthly Spending</h2>
+
+              <select id="barFilter">
+                <option>2026</option>
+
+                <option>2025</option>
+              </select>
+            </div>
+
+            <canvas id="monthlyChart"></canvas>
+          </div>
+        </section>
+
+        <section class="chart-box">
+          <div class="chart-header">
+            <h2>Expense Trend</h2>
+
+            <select id="lineFilter">
+              <option value="12">Last 12 Months</option>
+              <option value="6">Last 6 Months</option>
+              <option value="3">Last 3 Months</option>
+            </select>
+          </div>
+
+          <canvas id="lineChart"></canvas>
+        </section>
+
+        <section class="analytics-grid">
+          <div class="analytics-card">
+            <h3>
+              <i class="fa-solid fa-fire"></i>
+
+              Top Spending Category
+            </h3>
+
+            <p id="topCategoryName">-</p>
+
+            <h2 id="topCategoryAmount">₹0</h2>
+          </div>
+
+          <div class="analytics-card">
+            <h3>
+              <i class="fa-solid fa-calendar"></i>
+
+              Highest Spending Month
+            </h3>
+
+            <p id="highestMonth">-</p>
+
+            <h2 id="highestMonthAmount">₹0</h2>
+          </div>
+
+          <div class="analytics-card">
+            <h3>
+              <i class="fa-solid fa-piggy-bank"></i>
+
+              Savings
+            </h3>
+
+            <p>This Month</p>
+
+            <h2 id="analyticsSavings">₹0</h2>
+          </div>
+
+          <div class="analytics-card">
+            <h3>
+              <i class="fa-solid fa-bullseye"></i>
+
+              Budget Status
+            </h3>
+
+            <p>Remaining</p>
+
+            <h2 id="budgetStatus">0%</h2>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <script src="utils/debounce.js"></script>
+    <script src="utils/throttle.js"></script>
+    <script src="utils/lazyload.js"></script>
+  </body>
+</html>

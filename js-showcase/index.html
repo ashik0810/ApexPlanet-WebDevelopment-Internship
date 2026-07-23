@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Components Showcase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <header>
+      <h1>Interactive JavaScript Components Showcase</h1>
+      <button id="nav-toggle">☰</button>
+      <nav>
+        <a href="#hamburger">Hamburger Menu</a>
+        <a href="#darkmode">Dark Mode</a>
+        <a href="#backtotop">Back to Top</a>
+        <a href="#slider">Image Slider</a>
+        <a href="#modal">Modal</a>
+        <a href="#accordion">Accordion</a>
+        <a href="#form">Form Validation</a>
+        <a href="#counter">Counters</a>
+        <a href="#dragdrop">Drag & Drop</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hamburger Menu -->
+      <section id="hamburger">
+        <h2>Hamburger Menu</h2>
+        <button id="menu-btn">☰ Menu</button>
+        <ul id="menu" class="hidden">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </section>
+
+      <!-- Dark Mode -->
+      <section id="darkmode">
+        <h2>Dark/Light Mode</h2>
+        <button id="toggle-theme">Toggle Theme</button>
+      </section>
+
+      <!-- Back to Top -->
+      <section id="backtotop">
+        <h2>Back to Top</h2>
+        <p>Scroll down to see the button.</p>
+        <div style="height: 600px"></div>
+        <button id="back-to-top">↑ Top</button>
+      </section>
+
+      <!-- Image Slider -->
+      <section id="slider">
+        <h2>Image Slider</h2>
+        <div class="slider">
+          <img src="images/slide1.jpg" class="slide active" alt="Slide 1" />
+          <img src="images/slide2.png" class="slide" alt="Slide 2" />
+          <img src="images/slide3.webp" class="slide" alt="Slide 3" />
+        </div>
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+      </section>
+
+      <!-- Modal -->
+      <section id="modal-section">
+        <h2>Modal Popup</h2>
+        <button id="open-modal">Open Modal</button>
+        <div id="modal" class="hidden">
+          <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <p>This is a modal!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion -->
+      <section id="accordion">
+        <h2>Accordion FAQ</h2>
+        <div class="accordion">
+          <div class="item">
+            <button class="question">What is JS?</button>
+            <div class="answer hidden">
+              JavaScript is a programming language.
+            </div>
+          </div>
+          <div class="item">
+            <button class="question">Why use JS?</button>
+            <div class="answer hidden">It makes websites interactive.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Validation -->
+      <section id="form">
+        <h2>Form Validation</h2>
+        <form id="signup-form">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+        <p id="form-msg"></p>
+      </section>
+
+      <!-- Counters -->
+      <section id="counter">
+        <h2>Animated Counters</h2>
+        <div class="counter" data-target="100">0</div>
+        <div class="counter" data-target="250">0</div>
+      </section>
+
+      <!-- Drag & Drop -->
+      <section id="dragdrop">
+        <h2>Drag & Drop List</h2>
+        <ul id="drag-list">
+          <li draggable="true">Item 1</li>
+          <li draggable="true">Item 2</li>
+          <li draggable="true">Item 3</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: rgb(4, 7, 30);
+  color: white;
+  padding: 15px;
+}
+
+nav img {
+  height: 130px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: small;
+}
+
+.nav-links li a:hover {
+  color: #00bfff;
+}
+
+.nav-links li a.active {
+  color: #00bfff;
+  border-bottom: 2px solid #00bfff;
+  padding-bottom: 5px;
+}
+
+nav button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background-color: rgba(39, 39, 252, 0.907);
+  color: white;
+  cursor: pointer;
+}
+
+.contacts {
+  color: white;
+  text-align: center;
+  height: 200px;
+  padding: 40px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 10, 35, 0.95) 0%,
+      rgba(5, 30, 80, 0.8) 45%,
+      rgba(5, 30, 80, 0.45) 100%
+    ),
+    url("../About/images/about1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contacts .headp {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.contacts h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.contacts p {
+  margin-bottom: 20px;
+}
+
+.contacts span {
+  display: block;
+  font-size: 12px;
+}
+
+.contactsection{
+  display: flex;
+  justify-content: space-around;
+}
+
+.contacthead h3 {
+  padding: 40px;
+  font-size: 25px;
+  font-weight: 100px;
+}
+
+.contactform {
+  margin-left: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.nameform {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameform input {
+  margin-top: 15px;
+  width: 200px;
+  height: 35px;
+  border: 1px solid white;
+}
+
+.emailform {
+  display: flex;
+  flex-direction: column;
+}
+
+.emailform input {
+  margin-top: 15px;
+  width: 200px;
+  height: 35px;
+  border: 1px solid white;
+}
+
+.addressform {
+  display: flex;
+  flex-direction: column;
+}
+
+.address {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.addressform textarea {
+  margin-top: 15px;
+  width: 430px;
+  height: 100px;
+  border: 1px solid white;
+}
+
+.contactbtn{
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+
+.contactbtn button{
+  height: 40px;
+  padding: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: rgba(39, 39, 252, 0.907);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+
+.infohead h3{
+  padding: 40px;
+  font-size: 25px;
+  font-weight: 100px;
+}
+
+
+.info ul li{
+  margin-bottom: 25px;
+  align-items: center;
+  list-style: none;
+}
+
+footer {
+  background-color: rgb(4, 7, 30);
+  color: white;
+  height: 260px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+footer img {
+  height: 110px;
+}
+
+.fcombined {
+  margin-left: 100px;
+}
+
+.fcombined p {
+  width: 40%;
+  text-align: start;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.fquicklinks {
+  margin: 10px;
+}
+
+.fquicklinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.fquicklinks ul li {
+  list-style: none;
+  margin: 15px 0px;
+}
+
+.fservices {
+  margin: 10px;
+}
+
+.fservices ul li {
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.fcontact {
+  margin: 10px;
+}
+
+.fcontact ul li {
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+
+
+@media (max-width: 1200px) {
+  .contactsection {
+    gap: 40px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav img {
+    height: 110px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  nav button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .contactsection {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .getintouch,
+  .information {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  footer {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .fcombined {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .fcombined p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  nav button {
+    width: fit-content;
+  }
+
+  .contacts {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .contacts h2 {
+    font-size: 28px;
+  }
+
+  .contacthead h3,
+  .infohead h3 {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .contactform {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .nameform input,
+  .emailform input {
+    width: 100%;
+  }
+
+  .address {
+    margin-left: 0;
+  }
+
+  .addressform textarea {
+    width: 100%;
+  }
+
+  .contactbtn {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fcombined {
+    text-align: center;
+  }
+
+  .fcombined p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+    height: 90px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav button {
+    width: 100%;
+  }
+
+  .contacts {
+    padding: 40px 15px;
+  }
+
+  .contacts h2 {
+    font-size: 24px;
+  }
+
+  .contacts span {
+    font-size: 14px;
+  }
+
+  .contacthead h3,
+  .infohead h3 {
+    font-size: 22px;
+  }
+
+  .nameform input,
+  .emailform input,
+  .addressform textarea {
+    width: 100%;
+  }
+
+  .contactbtn button {
+    width: 100%;
+  }
+
+  .info ul li {
+    font-size: 14px;
+  }
+
+  footer img {
+    height: 90px;
+  }
+}

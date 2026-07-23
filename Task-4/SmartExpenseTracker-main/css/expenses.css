@@ -1,0 +1,191 @@
+:root {
+  --sidebar: #08141f;
+  --sidebar2: #132738;
+
+  --primary: #19c463;
+  --primary-dark: #13b156;
+
+  --blue: #3b82f6;
+  --orange: #ffa726;
+  --purple: #8b5cf6;
+
+  --card: #ffffff;
+  --border: #ececec;
+
+  --text: #202124;
+  --light: #8a94a6;
+
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+  --radius: 18px;
+}
+
+.expense-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.control-search {
+  position: relative;
+  width: 320px;
+}
+
+.control-search i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--light);
+}
+
+.control-search input {
+  width: 100%;
+  height: 46px;
+  padding: 0 16px 0 45px;
+  border: 1px solid var(--border);
+  outline: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+.control-search input:focus {
+  border-color: var(--primary);
+}
+
+.expense-controls select,
+.expense-controls input[type="date"] {
+  height: 46px;
+  min-width: 170px;
+  padding: 0 15px;
+  border: 1px solid var(--border);
+  outline: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  cursor: pointer;
+}
+
+.expense-controls select:focus,
+.expense-controls input[type="date"]:focus {
+  border-color: var(--primary);
+}
+
+.export-btn {
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.export-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.25);
+}
+
+.paid,
+.pending,
+.failed {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 6px 14px;
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.paid {
+  background: #eafbf1;
+  color: #19c463;
+}
+
+.pending {
+  background: #fff7e6;
+  color: #f59e0b;
+}
+
+.failed {
+  background: #fff1f1;
+  color: #ef4444;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #19c463, #13b156);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap:8px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.pagination button:hover{
+    transform: translateY(-2px);
+}
+
+.pagination span{
+    font-size: 15px;
+    font-weight: 500;
+    color:var(--light);
+}
+
+
+@media(max-width:992px){
+    .expense-controls{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .control-search{
+        width: 100%;
+    }
+
+    .expense-controls select,
+    .expense-controls input[type="date"],
+    .export-btn{
+        width:100%;
+    }
+}
+
+@media(max-width:768px){
+    .pagination{
+        flex-direction: column;
+        gap:15px;
+    }
+
+    table{
+        min-width: 800px;
+    }
+
+    .pagination button{
+        width:100%;
+        justify-content: center;
+    }
+}

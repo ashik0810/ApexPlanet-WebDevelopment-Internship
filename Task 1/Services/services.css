@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: rgb(4, 7, 30);
+  color: white;
+  padding: 15px;
+}
+
+nav img {
+  height: 130px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: small;
+}
+
+.nav-links li a:hover{
+  color: #00bfff;
+}
+
+.nav-links li a.active{
+  color: #00bfff;
+  border-bottom: 2px solid #00bfff;
+  padding-bottom: 5px;
+}
+
+nav button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background-color: rgba(39, 39, 252, 0.907);
+  color: white;
+  cursor: pointer;
+}
+
+.services {
+  color: white;
+  text-align: center;
+  height: 200px;
+  padding: 40px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 10, 35, 0.95) 0%,
+      rgba(5, 30, 80, 0.8) 45%,
+      rgba(5, 30, 80, 0.45) 100%
+    ),
+    url("../About/images/about1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services .headp {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.services h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.services p {
+  margin-bottom: 20px;
+}
+
+.services span {
+  display: block;
+  font-size: 12px;
+}
+
+.card-cotainer .container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.card-cotainer .container .cards {
+  text-align: center;
+  margin-top: 30px;
+  width: 200px;
+  height: 220px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px gray;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.card-cotainer .container img {
+  height: 100px;
+}
+
+.card-cotainer .container h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.card-cotainer .container p {
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(39, 39, 252, 0.907);
+  height: 80px;
+  gap: 70px;
+  color: white;
+}
+
+.tooltext h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.tooltext p {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.toolbtn button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 15px;
+  background-color: white;
+  color: rgba(39, 39, 252, 0.907);;
+  border: 1px solid white;
+}
+
+footer{
+  background-color: rgb(4, 7, 30);
+  color: white;
+  height: 260px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+footer img{
+  height: 110px;
+
+}
+
+.fcombined{
+  margin-left: 100px;
+}
+
+
+
+.fcombined p{
+  width: 40%;
+  text-align: start;
+  font-size: 15px;
+  font-weight: 100;
+  
+}
+
+
+.fquicklinks{
+  margin: 10px;
+}
+
+.fquicklinks ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.fquicklinks ul li{
+  list-style: none;
+  margin: 15px 0px;
+}
+
+.fservices{
+  margin: 10px;
+}
+
+.fservices ul li{
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+
+}
+
+.fcontact{
+  margin: 10px;
+}
+
+.fcontact ul li{
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+
+
+@media (max-width: 1200px) {
+  .card-cotainer .container {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .toolbar {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav img {
+    height: 110px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  nav button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .card-cotainer .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  footer {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .fcombined {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .fcombined p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  nav button {
+    width: fit-content;
+  }
+
+  .services {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .services h2 {
+    font-size: 28px;
+  }
+
+  .card-cotainer .container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .card-cotainer .container .cards {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .toolbar {
+    text-align: center;
+  }
+
+  .toolbtn button {
+    margin-right: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fcombined {
+    text-align: center;
+  }
+
+  .fcombined p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+    height: 90px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav button {
+    width: 100%;
+  }
+
+  .services {
+    padding: 40px 15px;
+  }
+
+  .services h2 {
+    font-size: 24px;
+  }
+
+  .services span {
+    font-size: 14px;
+  }
+
+  .card-cotainer .container .cards {
+    width: 95%;
+  }
+
+  .card-cotainer .container img {
+    height: 80px;
+  }
+
+  .card-cotainer .container h3 {
+    font-size: 18px;
+  }
+
+  .card-cotainer .container p {
+    font-size: 14px;
+  }
+
+  .toolbar {
+    padding: 25px 15px;
+  }
+
+  .tooltext h3 {
+    font-size: 18px;
+  }
+
+  .tooltext p {
+    font-size: 14px;
+  }
+
+  .toolbtn button {
+    width: 100%;
+  }
+
+  footer img {
+    height: 90px;
+  }
+}

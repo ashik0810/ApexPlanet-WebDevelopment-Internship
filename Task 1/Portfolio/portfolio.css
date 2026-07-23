@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: rgb(4, 7, 30);
+  color: white;
+  padding: 15px;
+}
+
+nav img {
+  height: 130px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: small;
+}
+
+.nav-links li a:hover {
+  color: #00bfff;
+}
+
+.nav-links li a.active {
+  color: #00bfff;
+  border-bottom: 2px solid #00bfff;
+  padding-bottom: 5px;
+}
+
+nav button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background-color: rgba(39, 39, 252, 0.907);
+  color: white;
+  cursor: pointer;
+}
+
+.portfolio {
+  color: white;
+  text-align: center;
+  height: 200px;
+  padding: 40px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 10, 35, 0.95) 0%,
+      rgba(5, 30, 80, 0.8) 45%,
+      rgba(5, 30, 80, 0.45) 100%
+    ),
+    url("../About/images/about1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolio .headp {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.portfolio h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.portfolio p {
+  margin-bottom: 20px;
+}
+
+.portfolio span {
+  display: block;
+  font-size: 12px;
+}
+
+.card-container .portcards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.cards {
+  width: 225px;
+  height: 250px;
+  box-shadow: 1px 1px 4px gray;
+  border: 1px solid white;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.cards img {
+  height: 150px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.cards h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.cards p {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+footer {
+  background-color: rgb(4, 7, 30);
+  color: white;
+  height: 260px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+footer img {
+  height: 110px;
+}
+
+.fcombined {
+  margin-left: 100px;
+}
+
+.fcombined p {
+  width: 40%;
+  text-align: start;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.fquicklinks {
+  margin: 10px;
+}
+
+.fquicklinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.fquicklinks ul li {
+  list-style: none;
+  margin: 15px 0px;
+}
+
+.fservices {
+  margin: 10px;
+}
+
+.fservices ul li {
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.fcontact {
+  margin: 10px;
+}
+
+.fcontact ul li {
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .card-container .portcards {
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav img {
+    height: 110px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  nav button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .card-container .portcards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  footer {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .fcombined {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .fcombined p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  nav button {
+    width: fit-content;
+  }
+
+  .portfolio {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .portfolio h2 {
+    font-size: 28px;
+  }
+
+  .card-container .portcards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .cards img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fcombined {
+    text-align: center;
+  }
+
+  .fcombined p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+    height: 90px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav button {
+    width: 100%;
+  }
+
+  .portfolio {
+    padding: 40px 15px;
+  }
+
+  .portfolio h2 {
+    font-size: 24px;
+  }
+
+  .portfolio span {
+    font-size: 14px;
+  }
+
+  .cards {
+    width: 95%;
+  }
+
+  .cards h3 {
+    font-size: 18px;
+  }
+
+  .cards p {
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+
+  footer img {
+    height: 90px;
+  }
+}
