@@ -138,13 +138,12 @@ Tested on:
 
 screenshots/
 │
-├── Part 1.png
-├── Part 2.png
-├── Part 3.png
-├── Part 4.png
-├── Part 5.png
-└── Part 6.png
-└── Part 7.png
+├── Part1.png
+├── Part2.png
+├── Part3.png
+├── Part4.png
+├── Part5.png
+└── Part6.png
 
 ````
 

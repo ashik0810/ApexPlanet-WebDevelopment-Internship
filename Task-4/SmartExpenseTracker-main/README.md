@@ -8,82 +8,82 @@ A modern, responsive **Smart Expense Tracker** built using **HTML, CSS, and Java
 
 ### Dashboard
 
-* View total expenses
-* Monthly budget tracking
-* Remaining budget calculation
-* Total transaction count
-* Recent expenses table
-* Top spending categories
-* Interactive Pie Chart
-* Interactive Bar Chart
-* Load More functionality for recent expenses
+- View total expenses
+- Monthly budget tracking
+- Remaining budget calculation
+- Total transaction count
+- Recent expenses table
+- Top spending categories
+- Interactive Pie Chart
+- Interactive Bar Chart
+- Load More functionality for recent expenses
 
 ### Expense Management
 
-* Add new expenses
-* Edit existing expenses
-* Delete expenses
-* Search expenses
-* Filter by category
-* Filter by payment method
-* Filter by date
-* Pagination
+- Add new expenses
+- Edit existing expenses
+- Delete expenses
+- Search expenses
+- Filter by category
+- Filter by payment method
+- Filter by date
+- Pagination
 
 ### Analytics
 
-* Category-wise Pie Chart
-* Monthly Expense Bar Chart
-* Expense Trend Line Chart
-* Dynamic chart filtering
-* Highest expense
-* Average expense
-* Top spending category
-* Highest spending month
-* Savings calculation
-* Budget status
+- Category-wise Pie Chart
+- Monthly Expense Bar Chart
+- Expense Trend Line Chart
+- Dynamic chart filtering
+- Highest expense
+- Average expense
+- Top spending category
+- Highest spending month
+- Savings calculation
+- Budget status
 
 ### Settings
 
-* Change profile name
-* Change currency
-* Set monthly budget
-* Theme preference
-* Persistent settings using Local Storage
+- Change profile name
+- Change currency
+- Set monthly budget
+- Theme preference
+- Persistent settings using Local Storage
 
 ### Performance Optimizations
 
-* Search with Debouncing
-* Throttling
-* Lazy Loading using Intersection Observer
-* Load More functionality
-* Responsive sidebar navigation
+- Search with Debouncing
+- Throttling
+- Lazy Loading using Intersection Observer
+- Load More functionality
+- Responsive sidebar navigation
 
 ### User Interface
 
-* Modern dashboard
-* Responsive layout
-* Dark/Light theme
-* Mobile-friendly design
-* Clean and intuitive interface
+- Modern dashboard
+- Responsive layout
+- Dark/Light theme
+- Mobile-friendly design
+- Clean and intuitive interface
 
 ---
 
 ## 🛠️ Technologies Used
 
-* HTML5
-* CSS3
-* JavaScript (ES6)
-* Chart.js
-* Font Awesome
-* Google Fonts (Poppins)
-* Local Storage API
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Chart.js
+- Font Awesome
+- Google Fonts (Poppins)
+- Local Storage API
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-Smart-Expense-Tracker/
+SmartExpenseTracker-main/
 │
 ├── assets/
 │   ├── icons/
@@ -122,14 +122,14 @@ Smart-Expense-Tracker/
 
 ## 🌐 Live Demo
 
-https://smartexpensetracker-crud.netlify.app
+https://smart-expensetracker-wb.netlify.app/
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
 
 ```bash
-[git clone https://github.com/Sanjay-git-02/SmartExpenseTracker]
+[git clone https://github.com/ashik0810/Task-4.git]
 ```
 
 2. Open the project folder.
@@ -142,9 +142,9 @@ No additional installation or server setup is required.
 
 ## 📊 Charts Included
 
-* Pie Chart – Category Distribution
-* Bar Chart – Monthly Expenses
-* Line Chart – Expense Trend
+- Pie Chart – Category Distribution
+- Bar Chart – Monthly Expenses
+- Line Chart – Expense Trend
 
 All charts update dynamically based on the selected filters.
 
@@ -152,10 +152,10 @@ All charts update dynamically based on the selected filters.
 
 ## ⚡ Performance Features
 
-* Debounced search to reduce unnecessary processing
-* Throttled event handling for better performance
-* Lazy loading of images using Intersection Observer
-* Efficient rendering with Load More and Pagination
+- Debounced search to reduce unnecessary processing
+- Throttled event handling for better performance
+- Lazy loading of images using Intersection Observer
+- Efficient rendering with Load More and Pagination
 
 ---
 
@@ -169,29 +169,29 @@ The application stores all data locally using the browser's **Local Storage**, a
 
 The application is fully responsive and works across:
 
-* Desktop
-* Laptop
-* Tablet
-* Mobile devices
+- Desktop
+- Laptop
+- Tablet
+- Mobile devices
 
 ---
 
 ## 🔮 Future Enhancements
 
-* User authentication
-* Cloud database integration
-* Export to PDF/Excel
-* Budget notifications
-* Recurring expense reminders
-* Multi-user support
-* Income management
-* Advanced financial reports
+- User authentication
+- Cloud database integration
+- Export to PDF/Excel
+- Budget notifications
+- Recurring expense reminders
+- Multi-user support
+- Income management
+- Advanced financial reports
 
 ---
 
 ## 👨‍💻 Author
 
-**Sanjay C.M.**
+**Muhammad Ashik H**
 
 Aspiring Full Stack Developer | AI Enthusiast | Data Science Enthusiast
 
