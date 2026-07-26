@@ -9,53 +9,97 @@ body {
   background: #f5f5f5;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 65px;
-  background-color: rgb(4, 7, 30);
-  color: white;
-  padding: 15px;
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    min-height:70px;
+    background:rgb(4,7,30);
+    color:#fff;
+    padding:15px 5%;
 }
 
-nav img {
-  height: 130px;
+nav img{
+    height:110px;
+    width:auto;
+    display:block;
 }
 
-.nav-links {
-  display: flex;
-  gap: 35px;
-  list-style: none;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    list-style:none;
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: small;
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    transition:.3s;
 }
 
 .nav-links li a:hover{
-  color: #00bfff;
+    color:#00bfff;
 }
 
 .nav-links li a.active{
-  color: #00bfff;
-  border-bottom: 2px solid #00bfff;
-  padding-bottom: 5px;
+    color:#00bfff;
+    border-bottom:2px solid #00bfff;
+    padding-bottom:5px;
 }
 
-nav button {
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  padding: 10px 20px;
-  background-color: rgba(39, 39, 252, 0.907);
-  color: white;
-  cursor: pointer;
+/* Button */
+
+.nav-btn{
+    border:none;
+    outline:none;
+    border-radius:20px;
+    padding:10px 22px;
+    background:rgba(39,39,252,.907);
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
 }
 
+.nav-btn:hover{
+    background:rgb(57,57,252);
+}
+
+.desktop-btn{
+    display:block;
+}
+
+/* Hamburger */
+
+.menu-toggle{
+    display:none;
+    width:35px;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:100%;
+    height:3px;
+    background:#fff;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.menu-button{
+    display:none;
+}
 .services {
   color: white;
   text-align: center;
@@ -102,10 +146,11 @@ nav button {
 .card-cotainer .container .cards {
   text-align: center;
   margin-top: 30px;
-  width: 200px;
-  height: 220px;
-  padding: 10px;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 220px;
+  padding: 20px;
+  border-radius: 8px;
   box-shadow: 1px 1px 4px gray;
   border: 1px solid white;
   cursor: pointer;
@@ -161,257 +206,365 @@ nav button {
   border: 1px solid white;
 }
 
+/* ===========================
+   FOOTER
+=========================== */
+
 footer{
-  background-color: rgb(4, 7, 30);
-  color: white;
-  height: 260px;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+    background:rgb(4,7,30);
+    color:#fff;
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:40px;
+
+    padding:60px 5%;
+
+    height:auto;
 }
 
 footer img{
-  height: 110px;
-
+    height:110px;
+    width:auto;
 }
 
 .fcombined{
-  margin-left: 100px;
+    margin-left:0;
 }
-
-
 
 .fcombined p{
-  width: 40%;
-  text-align: start;
-  font-size: 15px;
-  font-weight: 100;
-  
+    width:100%;
+    font-size:15px;
+    line-height:1.8;
 }
 
-
-.fquicklinks{
-  margin: 10px;
+.fquicklinks h3,
+.fservices h3,
+.fcontact h3{
+    margin-bottom:18px;
 }
 
-.fquicklinks ul li a{
-  text-decoration: none;
-  color: white;
-  font-size: 13px;
-  font-weight: 100;
+.fquicklinks ul,
+.fservices ul,
+.fcontact ul{
+    padding:0;
 }
 
-.fquicklinks ul li{
-  list-style: none;
-  margin: 15px 0px;
+.fquicklinks li,
+.fservices li,
+.fcontact li{
+    list-style:none;
+    margin:14px 0;
 }
 
-.fservices{
-  margin: 10px;
+.fquicklinks a{
+    text-decoration:none;
+    color:#fff;
+    transition:.3s;
 }
 
-.fservices ul li{
-  list-style: none;
-  margin: 15px 0px;
-  font-size: 13px;
-  font-weight: 100;
-
-}
-
-.fcontact{
-  margin: 10px;
-}
-
-.fcontact ul li{
-  list-style: none;
-  margin: 15px 0px;
-  font-size: 13px;
-  font-weight: 100;
+.fquicklinks a:hover{
+    color:#00bfff;
 }
 
 
 
-@media (max-width: 1200px) {
-  .card-cotainer .container {
-    gap: 20px;
-    padding: 0 20px;
-  }
+@media (max-width:1200px){
 
-  .toolbar {
-    gap: 40px;
-  }
+    .card-cotainer{
+        padding:50px 30px;
+    }
+
+    .card-cotainer .container{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:25px;
+    }
+
+    .card-cotainer .cards{
+        width:100%;
+        max-width:240px;
+    }
+
+    .toolbar{
+        gap:40px;
+        padding:25px;
+    }
+
+}
+@media (max-width:992px){
+
+/* Hero */
+
+.services{
+    padding:55px 30px;
 }
 
-@media (max-width: 992px) {
-  nav {
-    padding: 15px 20px;
-  }
+.services h2{
+    font-size:30px;
+}
 
-  nav img {
-    height: 110px;
-  }
+/* Cards */
 
-  .nav-links {
-    gap: 20px;
-  }
-
-  nav button {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .card-cotainer .container {
-    flex-wrap: wrap;
-    justify-content: center;
+.card-cotainer .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 30px;
-  }
-
-  .toolbar {
-    flex-direction: column;
-    height: auto;
-    gap: 20px;
-    padding: 30px 20px;
-  }
-
-  footer {
-    height: auto;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 30px;
-  }
-
-  .fcombined {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .fcombined p {
-    width: 100%;
-  }
 }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    height: auto;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
-
-  nav button {
-    width: fit-content;
-  }
-
-  .services {
-    height: auto;
-    padding: 50px 20px;
-  }
-
-  .services h2 {
-    font-size: 28px;
-  }
-
-  .card-cotainer .container {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-  }
-
-  .card-cotainer .container .cards {
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-    padding: 20px;
-  }
-
-  .toolbar {
-    text-align: center;
-  }
-
-  .toolbtn button {
-    margin-right: 0;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .fcombined {
-    text-align: center;
-  }
-
-  .fcombined p {
-    text-align: center;
-  }
+.card-cotainer .cards {
+    width: 100%;
+    max-width: none;
 }
 
-@media (max-width: 480px) {
-  nav img {
-    height: 90px;
-  }
+/* Toolbar */
 
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
+.toolbar{
+    flex-direction:column;
+    height:auto;
+    gap:20px;
+    padding:35px 25px;
+    text-align:center;
+}
 
-  nav button {
-    width: 100%;
-  }
+/* Footer */
 
-  .services {
-    padding: 40px 15px;
-  }
+footer{
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
 
-  .services h2 {
-    font-size: 24px;
-  }
+.fcombined{
+    grid-column:1/-1;
+}
 
-  .services span {
-    font-size: 14px;
-  }
+}
 
-  .card-cotainer .container .cards {
-    width: 95%;
-  }
+@media (max-width:768px){
 
-  .card-cotainer .container img {
-    height: 80px;
-  }
+/* ===========================
+   MOBILE NAVBAR
+=========================== */
 
-  .card-cotainer .container h3 {
-    font-size: 18px;
-  }
+@media (max-width:768px){
 
-  .card-cotainer .container p {
-    font-size: 14px;
-  }
+nav{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    min-height:70px;
+}
 
-  .toolbar {
-    padding: 25px 15px;
-  }
+nav img{
+    height:85px;
+    width:auto;
+}
 
-  .tooltext h3 {
-    font-size: 18px;
-  }
+.menu-toggle{
+    display:flex;
+}
 
-  .tooltext p {
-    font-size: 14px;
-  }
+.desktop-btn{
+    display:none;
+}
 
-  .toolbtn button {
-    width: 100%;
-  }
+.nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:rgb(4,7,30);
 
-  footer img {
-    height: 90px;
-  }
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+
+    padding:25px 0;
+
+    z-index:1000;
+}
+
+.nav-links.active{
+    display:flex;
+}
+
+.nav-links li{
+    width:100%;
+    text-align:center;
+}
+
+.nav-links li a{
+    display:block;
+    padding:12px 0;
+}
+
+.menu-button{
+    display:block;
+}
+
+.menu-button .nav-btn{
+    width:220px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.services{
+    padding:50px 20px;
+}
+
+.services h2{
+    font-size:28px;
+}
+
+/* ===========================
+   SERVICE CARDS
+=========================== */
+
+.card-cotainer{
+    padding:40px 20px;
+}
+
+.card-cotainer .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+}
+
+.card-cotainer .cards{
+    width:90%;
+    max-width:360px;
+    min-height:260px;
+    padding:25px 20px;
+}
+
+.card-cotainer img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+.card-cotainer h3{
+    font-size:22px;
+    margin:18px 0 10px;
+}
+
+.card-cotainer p{
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* ===========================
+   TOOLBAR
+=========================== */
+
+.toolbar{
+    flex-direction:column;
+    gap:20px;
+    height:auto;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.toolbtn button{
+    width:220px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+
+    text-align:center;
+
+    padding:40px 25px;
+
+    height:auto;
+}
+
+footer img{
+    margin:auto;
+}
+
+.fcombined{
+    margin-left:0;
+}
+
+.fcombined p{
+    width:100%;
+    text-align:center;
+}
+
+}
+
+@media (max-width:480px){
+
+.services{
+    padding:40px 15px;
+}
+
+.services h2{
+    font-size:24px;
+}
+
+.services span{
+    font-size:14px;
+}
+
+.card-cotainer{
+    padding:35px 15px;
+}
+
+.card-cotainer .cards{
+    max-width:100%;
+}
+
+.card-cotainer img{
+    width:80px;
+    height:80px;
+}
+
+.card-cotainer h3{
+    font-size:20px;
+}
+
+.card-cotainer p{
+    font-size:14px;
+}
+
+.toolbar{
+    padding:25px 15px;
+}
+
+.tooltext h3{
+    font-size:20px;
+}
+
+.tooltext p{
+    font-size:14px;
+}
+
+.toolbtn button{
+    width:100%;
+}
+
+footer{
+    padding:35px 20px;
+    height:auto;
+}
+
+footer img{
+    height:90px;
+}
+
 }

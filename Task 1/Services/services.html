@@ -7,21 +7,48 @@
     <link rel="stylesheet" href="services.css" />
   </head>
   <body>
-    <nav>
-      <div class="image">
-        <img src="images/homefooter.png" alt="" />
-      </div>
+  <nav>
 
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../About/about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
-        <li><a href="../Blog/blog.html">Blog</a></li>
-        <li><a href="../Contact/contact.html">Contact</a></li>
-      </ul>
-      <button>Get In Touch</button>
-    </nav>
+  <!-- Logo -->
+  <div class="image">
+    <a href="../index.html">
+      <img src="images/homefooter.png" alt="TechNova Logo">
+    </a>
+  </div>
+
+  <!-- Hamburger -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../About/about.html">About</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
+    <li><a href="../Blog/blog.html">Blog</a></li>
+    <li><a href="../Contact/contact.html">Contact</a></li>
+
+    <li class="menu-button">
+      <button
+        class="nav-btn"
+        onclick="window.location.href='../Contact/contact.html'">
+        Get In Touch
+      </button>
+    </li>
+  </ul>
+
+  <!-- Desktop Button -->
+  <button
+    class="nav-btn desktop-btn"
+    onclick="window.location.href='../Contact/contact.html'">
+    Get In Touch
+  </button>
+
+</nav>
     <div class="services">
       <p class="headp">Home / Services</p>
       <h2>Our Services</h2>
@@ -116,5 +143,6 @@
         </ul>
       </div>
     </footer>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
