@@ -116,7 +116,7 @@ TASK-3/
 ├── index.html
 ├── script.js
 ├── style.css
-└── README2.md
+└── README.md
 ```
 
 ---

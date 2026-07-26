@@ -335,7 +335,7 @@ I sincerely thank **ApexPlanet Software Pvt. Ltd.** for providing this internshi
 
 # 👨‍💻 Author
 
-## Sanjay C M
+## Muhammad Ashik H
 
 **Full Stack Web Development Intern**
 
